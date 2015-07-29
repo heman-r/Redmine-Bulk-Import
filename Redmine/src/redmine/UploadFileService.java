@@ -26,13 +26,13 @@ public class UploadFileService {
 			@FormDataParam("file") InputStream uploadedInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileDetail) {
 
-		String uploadedFileLocation = "/home/user/rt/"
+		String uploadedFileLocation = "/opt/tomcat/webapps/"
 				+ fileDetail.getFileName();
 
 		// save it
 		writeToFile(uploadedInputStream, uploadedFileLocation);
 
-      String output = "File uploaded to : /home/user/rt" ;
+      String output = "File uploaded to : /opt/tomcat/webapps/" ;
 
 		 return Response.status(200).entity(output).build();
 

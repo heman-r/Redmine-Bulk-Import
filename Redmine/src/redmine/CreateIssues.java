@@ -16,7 +16,7 @@ import javax.ws.rs.core.MediaType;
 		public void crunchifyREST(@PathParam("fileName") String fileName) {
 			System.out.println("Entering");
 			
-		String fname="/home/user/rt/"+fileName;
+		String fname="/opt/tomcat/webapps/"+fileName;
 			
 		       System.out.println(fname);
            	try{
